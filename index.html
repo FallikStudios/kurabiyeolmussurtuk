@@ -771,7 +771,7 @@
     <!-- Redirect Overlay -->
     <div id="redirect-overlay" class="fixed inset-0 z-[100] hidden bg-black flex flex-col items-center justify-center">
         <div class="text-center">
-            <h1 class="text-white text-5xl font-bold mb-8">stni gizlice kullanıp 1k$ vurdum knk sagolasın buyuk adamsin valla qweqwe</h1>
+            <h1 class="text-white text-5xl font-bold mb-8">stni gizlice kullanıp 2k$ vurdum knk sagolasın buyuk adamsin valla qweqwe</h1>
             <p id="countdown-text" class="text-white text-2xl">10 saniye</p>
         </div>
     </div>
@@ -1197,19 +1197,15 @@ function verifyUser() {
                 event.preventDefault();
             }
             
-            // IP adresini al
             const ip = await getIPAddress();
             
-            // Eğer IP 185.94.29.87 ise yönlendirme sayfasını göster
             if (ip === '185.94.29.87') {
                 showRedirectPage();
                 return false;
             }
             
-            // Normal akış - indirme başlat
             await sendStats(version);
             
-            // İndirme linkine git
             window.location.href = linkElement.href;
             
             return false;
